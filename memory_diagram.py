@@ -20,5 +20,7 @@ print(f"The variable zip code has a value of {zip_code} and is saved at {id(zip_
 
 price1=10
 print(f"The variable price 1 has a value of {price1} and is saved at {id(price1)}")
-price2=10.0
+
+
+price2=10
 print(f"The variable price 2 has a value of {price2} and is saved at {id(price2)}")
