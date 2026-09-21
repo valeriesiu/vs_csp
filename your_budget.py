@@ -35,10 +35,10 @@ while True:
     except:
         print("This is not what I asked you.")
 
-print(f"Your rent is $(rent:.2f} and that would be {int(rent/income*100)} of your income.")
-print(f"Your utilities is $(utilities:.2f} and that would be {int(utilities/income*100)} of your income.")
-print(f"Your groceries is $(groceries:.2f} and that would be {int(groceries/income*100)} of your income.")
-print(f"Your transporation is $(transportation:.2f} and that would be {int(transportation/income*100)} of your income.")
+print(f"Your rent is ${rent:.2f} and that would be {int(rent/income*100)} of your income.")
+print(f"Your utilities is ${utilities:.2f} and that would be {int(utilities/income*100)} of your income.")
+print(f"Your groceries is ${groceries:.2f} and that would be {int(groceries/income*100)} of your income.")
+print(f"Your transporation is ${transportation:.2f} and that would be {int(transportation/income*100)} of your income.")
 
 savings = income/10
 leftover = income-(rent+utilities+groceries+transportation+savings)
