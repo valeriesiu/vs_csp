@@ -16,21 +16,21 @@ while True:
 
 while True:
     try:
-      rent=float(input("How much do you spend per month on utilities?: "))
+      utilities=float(input("How much do you spend per month on utilities?: "))
       break
     except:
         print("This is not what I asked you.")
 
 while True:
     try:
-      rent=float(input("How much do you spend per month on groceries?: "))
+      groceries=float(input("How much do you spend per month on groceries?: "))
       break
     except:
         print("This is not what I asked you.")
 
 while True:
     try:
-      rent=float(input("How much do you spend per month on transportation?: "))
+      transportation=float(input("How much do you spend per month on transportation?: "))
       break
     except:
         print("This is not what I asked you.")
