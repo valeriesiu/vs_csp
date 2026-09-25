@@ -5,6 +5,8 @@ uppercase= False
 lowercase=False
 number=False
 symbol=False
+count=0
+strength="Weak"
 
 password=input("What is your password?:")
 
@@ -27,6 +29,31 @@ for letter in password:
 for letter in "!@#$%^&*()~`":
     symbol=True
 
-    
+if length:
+    count+=1
+
+if uppercase:
+    count+=1
+
+if lowercase:
+    count+=1
+
+if number:
+    count+=1
+
+if symbol:
+    count+=1
+
+if count == 5:
+    strength="strong"
+
+elif count >= 3:
+    strength= "getting there"
+
+else:
+    strength="weak"
+
+print(f"Your password is" {strength})
+
 
     
