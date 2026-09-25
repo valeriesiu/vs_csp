@@ -53,7 +53,7 @@ elif count >= 3:
 else:
     strength="weak"
 
-print(f"Your password is" {strength})
+
 
 
     
