@@ -3,9 +3,9 @@ import random
 
 count=1  # this is the starting point
 
-while count <=10: #this is the stop point (boolean)
+while count <=20: #this is the stop point (boolean)
     print(count)
-    count+=1 
+    count+=1
 # increase iterator (The numner of times youve done the thing)
 #iteration is the thing your doing
 #the last thing of your while loop should be increasing the iterator
