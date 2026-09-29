@@ -47,6 +47,7 @@ if symbol:
 if count == 5:
     strength="strong"
 
+
 elif count >= 3:
     strength= "getting there"
 
