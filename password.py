@@ -1,59 +1,60 @@
 #VS password strength checker
 
-characters= False
-uppercase= False
-lowercase=False
-number=False
-symbol=False
-count=0
-strength="Weak"
-
 password=input("What is your password?:")
 
-for letter in password:
-    if len(password):
-        length=True
+length = len(password) >= 8
+lower = False
+upper = False
+symbol= False
+number = False
+strength= 0
+
 
 for letter in password:
+
     if letter .isupper():
-        uppercase= True
+        upper= True
 
-for letter in password:
-    if letter .islower():
-        lowercase=True
 
-for letter in password:
-    if letter .isnumeric():
+    elif letter .islower():
+        lower=True
+
+
+    elif letter .isnumeric():
         number=True
 
-for letter in "!@#$%^&*()~`":
-    symbol=True
+    elif letter in "~#$%^&@!()*?":
+        symbol= True
 
-if length:
-    count+=1
+print(f"Have a minimum of 8 characters: {length}")
+print(f"Your password should have an uppercase: {upper}")
+print(f"Your password should include a lowercase {lower}")
+print(f"Password should include a symbol: {symbol}")
+print(f"Password should include a number: {number}")
 
-if uppercase:
-    count+=1
+score = sum ([length,lower,upper,symbol,number])
 
-if lowercase:
-    count+=1
-
-if number:
-    count+=1
-
-if symbol:
-    count+=1
-
-if count == 5:
-    strength="strong"
-
-elif count >= 3:
-    strength= "getting there"
-
+if score <=2:
+    strength="Weak password"
+elif score <=4:
+    strength="Medium, your getting there."
 else:
-    strength="weak"
+    strength="Strong password!"
 
+print(f"Your password strength is a {strength}")
 
+if strength != "strong":
+    missing_items=[]
 
+    if not length:
+        missing_items.append("Make sure theres atleast 8 characters")
+    if not upper:
+        missing_items.append("Make sure theres an uppercase letter.")
+    if not number:
+        missing_items.append("Make sure that theres a number.")
+    if not symbol:
+        missing_items.append("Make sure youve added a symbol.")
+
+    print(f"In order to strengthen your password, {','.join(missing_items)}")
 
     
