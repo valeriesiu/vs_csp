@@ -53,7 +53,7 @@ else:
 
 print(f"Your password strength is a {strength}")
 
-if strength != "strong":
+if strength != "Strong password!":
     missing_items=[]
 
     if not length:
@@ -64,6 +64,8 @@ if strength != "strong":
         missing_items.append("Make sure that theres a number.")
     if not symbol:
         missing_items.append("Make sure youve added a symbol.")
+    if not lower:
+        missing_items.append("Make sure theres a lowercase letter. ")
 
     print(f"In order to strengthen your password, {','.join(missing_items)}")
 
