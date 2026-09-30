@@ -2,20 +2,22 @@
 
 import random
 
-answer=random.randint(1,100)
-attempt= 0
+min=1
+max=100
+attempts= 6
 
-while attempt < 6:
-    attempt = int(input("Pick a number between 1 and 100: "))
-    attempt = attempt + 1
+answer=random.randint(min,max)
 
-    if attempt == answer:
-        print(f"You got it right! It took {attempt} tries!")
+print("Guess a number between 1 and 100. You have 6 tries")
+
+for attempt in range(1, attempts + 1):
+    guess=int(input(f"What number do you guess?: "))
+    if guess == answer:
+        print(f"You got it right! it took {attempt} tries!")
         break
-    elif attempt < answer:
-        print("Guess again higher.")
+    elif guess > answer:
+        print("Too high! Try again.")
     else:
-        print("Guess agan lower.")
-
-if attempt != answer:
-    print(f"You ran out of tries. The answer was {answer}")
+        print("Too low! try again.")
+else:
+    print(f"Youve ran out of attempts. The answer was {answer}.")

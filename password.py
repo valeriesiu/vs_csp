@@ -1,29 +1,26 @@
 #VS password strength checker
 
-characters= False
-uppercase= False
-lowercase=False
-number=False
-symbol=False
-count=0
-strength="Weak"
-
 password=input("What is your password?:")
 
-for letter in password:
-    if len(password):
-        length=True
+length = len(password) >= 8
+lower = False
+upper = False
+symbol= False
+number = False
+strength= 0
+
 
 for letter in password:
+
     if letter .isupper():
-        uppercase= True
+        upper= True
 
-for letter in password:
-    if letter .islower():
-        lowercase=True
 
-for letter in password:
-    if letter .isnumeric():
+    elif letter .islower():
+        lower=True
+
+
+    elif letter .isnumeric():
         number=True
 
 for letter in "!@#$%^&*()~`":
@@ -52,9 +49,22 @@ elif count >= 3:
     strength= "getting there"
 
 else:
-    strength="weak"
+    strength="Strong password!"
 
+print(f"Your password strength is a {strength}")
 
+if strength != "strong":
+    missing_items=[]
 
+    if not length:
+        missing_items.append("Make sure theres atleast 8 characters")
+    if not upper:
+        missing_items.append("Make sure theres an uppercase letter.")
+    if not number:
+        missing_items.append("Make sure that theres a number.")
+    if not symbol:
+        missing_items.append("Make sure youve added a symbol.")
+
+    print(f"In order to strengthen your password, {','.join(missing_items)}")
 
     
