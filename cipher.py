@@ -2,8 +2,12 @@
 
 #ord stands for the ascii number
 
-choice=input("would you want to encrypt or decrypt your message?: ")
-message=input("What is the message?")
-shift=input("enter a shift amount?")
+choice=input("enter whether you would like to either decrypt or encrypt your message.:  ").lower().strip()
+message=input("type in the message here ->")
+shift=int(input("what amount would you like to shift by? "))
 
-choice
+def scramble (message,shift):
+    shifted=""
+    for chr in message:
+        if chr.isupper()
+        if chr.islower()
