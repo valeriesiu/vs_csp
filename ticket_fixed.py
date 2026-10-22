@@ -1,10 +1,12 @@
 #vs fixed ticket code
 age = int(input("Enter your age: "))
+if age < 0:
+    print("invalid age!")
 matinee = input("Is this a matinee? (yes/no): ").lower()
 
 if age < 5:
     price = 0.00
-elif age < 12:
+elif age <= 12:
     price = 8.00
 elif age < 65:
     price = 12.00
@@ -13,6 +15,6 @@ else:
 
 if matinee == "yes":
     price = price - 3.00
-
-
+    if price< 0:
+        price=0
 print(f"Ticket price: ${price:.2f}")
